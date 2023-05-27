@@ -123,9 +123,9 @@
 .main {
   width: 100%
 }
-.main .hero-row-one {
+.hero-row-one {
   position: relative;
-  height: 700px;
+  height: 100vh;
 }
 
 .image-hero {
@@ -134,25 +134,39 @@
   object-fit: cover;
 }
 
+.hero__text {
+  font-size: 3rem;
+}
+
+.hero-row-one-description {
+  transition: .4s ease-in;
+  opacity: 0;
+  top: 85%;
+}
+
+.image-hero:not(:focus) ~ .hero-row-one-description {
+  opacity: 1;
+}
+.image-hero:hover ~ .hero-row-one-description {
+  transform: translate(500px, 200px);
+  opacity: 0;
+}
+
+
 .main .hero-row-one .hero {
   height: 100%;
 }
 
 .principal__text {
   text-transform: uppercase;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: white;
   text-align: center;
 }
-.hero-row-one .container-hero-text .principal__text:first-child {
-  letter-spacing: 10px;
-  top: 65%;
+.principal__text:first-child {
+  letter-spacing: 14px;
 }
 
 .principal__text:last-child {
-  top: 70%;
   font-size: .8rem;
   font-weight: 500;
   font-style: italic;
@@ -178,12 +192,12 @@
   height: 500px;
   position: relative;
 }
-.hero-row-two .description {
+.description {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: max-content;
   transform: translate(-50%, -50%);
-  width: 100%;
 }
 
 .hero-row-two .description .principal__text:first-child {
@@ -223,10 +237,67 @@
   text-decoration:line-through;
   margin-bottom: .5rem;
 }
-
 .product-info .product-selling-price {
   font-size: 1.4rem;
 }
+
+
+.sold-out {
+  cursor: default;
+}
+
+.sold-out__text {
+  display: none;
+}
+
+.sold-out .sold-out__text {
+  display: flex; 
+  height: max-content;
+  transform: rotate(-16deg);
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 20px;
+  position: absolute;
+  top: 358px;
+  left: 15%;
+  z-index: 10;
+}
+
+.sold-out .product-image {
+  filter: opacity(.6);
+}
+
+.sold-out span {
+  width: 400px;
+  height: 700px;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+.sold-out span::before, .sold-out span::after {
+  width: 50px;
+  height: 100%;
+  background: white;
+  position: relative;
+  z-index: 9;
+}
+
+.sold-out span::before {
+  content: '';
+  transform: rotate(-76deg);
+  top: 0%;
+  left: 16%;
+}
+
+.sold-out span::after {
+  content: '';
+  transform: rotate(75deg);
+  top: 0%;
+  left: 50%;
+}
+
 .swiper-buttons-navigation {
   width: 90%;
   position: absolute;
@@ -301,14 +372,6 @@
   width: 100%;
   height: 400px;
   position: relative;
-}
-
-.collection-text-container {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* newsletter */

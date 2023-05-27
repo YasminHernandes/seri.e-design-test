@@ -37,7 +37,8 @@ const PopulateProduct = (product) => {
   return swiperWrapper.forEach(swiper => {
     swiper.insertAdjacentHTML('beforeend', `
     <div class="swiper-slide">
-      <div class="product-container ${product.sold_out}">
+      <div class="product-container ${product.sold_out ? 'sold-out' : ''}">
+        <span><p class="sold-out__text">sold out.</p></span>
         <img src=${product.img} alt="" width="400px" height="700px" class="product-image">
         <div class="product-info">
           <h3 class="product-name">${product.name}</h3>
