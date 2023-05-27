@@ -41,7 +41,7 @@ const PopulateProduct = (product) => {
         <img src=${product.img} alt="" width="400px" height="700px" class="product-image">
         <div class="product-info">
           <h3 class="product-name">${product.name}</h3>
-          <p class="product-price">${product.price}</p>
+          <p class="product-price">R$ ${product.price}</p>
           <p class="product-selling-price">R$ ${product.selling_price}</p>
         </div>
       </div>
