@@ -105,6 +105,10 @@
    width: 65%;
   }
 
+  .principal__text:last-child  {
+    font-size: .8rem;
+  }
+
   .footer-logo {
     width: 100px;
   }
@@ -120,8 +124,14 @@
   .hero__text {
     font-size: 2rem;
   }
+
+  .description{
+    width: 100%;
+  }
+
   .description .principal__text:first-child {
-    font-size: .8rem;
+    font-size: .9rem!important;
+    letter-spacing: 10px!important;
   }
 
   .highlights {

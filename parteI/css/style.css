@@ -55,18 +55,21 @@
   position: relative;
 }
 
-
-.nav .nav__link:hover::before {
+.nav__link:before {
   content: '';
   position: absolute;
-  bottom: -4px;
-  width: 0;
-  height: 10px;
-  border-bottom: 1px solid white;
+  bottom: -2px;
+  border-radius: 8px;
+  height: 1px;
+  width: 2px;
+  background: white;
+  transition: .4s ease-in;
   opacity: 0;
-  animation: slide .3s ease-in forwards linear
 }
-
+.nav__link:hover:before {
+  width: 100%;
+  opacity: 1;
+}
 
 .header-content .container-right {
   display: flex;
@@ -512,8 +515,8 @@
   align-items: center;
   justify-content: center;
   z-index: 2;
-  
 }
+
 .sticky-contact::after {
   content: '';
   width: 30px;
