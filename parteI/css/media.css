@@ -4,6 +4,7 @@
   }
 }
 
+
 @media screen and (max-width: 1024px) {
   .header-content {
     padding: 1rem 4rem;
@@ -85,6 +86,10 @@
   .nav--open .nav__list .nav__link {
     color: #939393!important;
     font-size: 1.2rem!important;
+  }
+
+  .hero-row-one {
+    height: 100vh;
   }
 
   .footer-row-one {
